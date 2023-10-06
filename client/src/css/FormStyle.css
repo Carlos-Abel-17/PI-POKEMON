@@ -70,6 +70,9 @@
  
   }
 }
+.img_user{
+  width: 90px;
+}
 
 .div_formulario{
     width: 45%;
@@ -128,15 +131,14 @@
     background: transparent;
     color: rgb(159, 159, 159);
 }
-.btn {
-    font-size: 17px;
-    background: transparent;
-    border: none;
-    padding: 1em 1.5em;
-    color: #ffedd3;
-    text-transform: uppercase;
-    position: relative;
-  }
-  
 
-
+.btn{
+  padding: 0.8em 2em;
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+  transition: 1s;
+}
+.btn:hover{
+  background-color: #f5ff33;
+}

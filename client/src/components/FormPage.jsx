@@ -179,6 +179,10 @@ function FormPage() {
             </span>
           )}
         </div>
+        <div style={{display:'flex',alignItems:'center'}} >
+            <h3>You Image:</h3>
+          <img src={datos.image} alt="" className="img_user"/>
+            </div>
       </div>
       <div className="div_formulario">
         <form className="form">
@@ -308,6 +312,7 @@ function FormPage() {
                 name="weight"
               />
             </div>
+            
           </div>
           <br />
           <div>
@@ -324,11 +329,8 @@ function FormPage() {
             </select>
           </div>
           <br />
-          <button type="sibmit" className="btn">
-            <span
-              className="spn2"
-              onClick={(event) => SubmitHandler(event, datos)}
-            >
+          <button type="sibmit" className="btn"  onClick={(event) => SubmitHandler(event, datos)}>
+            <span className="btntxt">
               Create
             </span>
           </button>
