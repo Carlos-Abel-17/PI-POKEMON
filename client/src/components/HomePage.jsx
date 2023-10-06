@@ -50,7 +50,6 @@ function handleFilter(event){
     dispath(resetHandler())
   }
   const attackhandler=(theorder)=>{
-    console.log(theorder)
     dispath(orderAttack(theorder.target.value))
   }
   return (

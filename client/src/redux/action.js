@@ -15,11 +15,10 @@ export const searchpokemon = (Name) => {
       try {
         const convertido = Name.toLowerCase();
         const { data } = await axios.get(`http://localhost:3001/pokemons/name?name=${convertido}`);
-        console.log(data);
-        console.log(dispatch({
+        dispatch({
           type: SEARCHPOKEMON,
           payload: data
-        }))
+        })
         
       } catch (error) {
         alert('el nombre del pokemon no existe sea mas expecifico con el nombre por favor')

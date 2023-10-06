@@ -63,7 +63,6 @@ const initialSate={
                 }else{
                    theorder = [...state.AllPokemon].sort((a, b) => a.attack - b.attack);
                 }
-                console.log(...theorder)
                 return{
                    ...state,
                    Pokemon:[...theorder]
