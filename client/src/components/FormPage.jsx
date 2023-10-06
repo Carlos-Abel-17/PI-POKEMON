@@ -8,15 +8,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { createPokemon, getTypes, getpokemon } from "../redux/action";
 import validate from "../asset/validate";
 import successfulvalidation from "../asset/successfulvalidation";
-// import axios from 'axios'
+
 
 function FormPage() {
-  // const pedir =async()=>{
-  //   const {data} = await axios.get('http://localhost:3001/type')
-  //   return data
-  // }
-  // const llamar =  pedir()
-  // console.log(llamar)
   useEffect(() => {
     dispatch(getTypes());
   }, []);
@@ -316,7 +310,6 @@ function FormPage() {
           </div>
           <br />
           <div>
-            {console.log(Types.map((tipos) => tipos))}
             <select className="tipos" name="types" value={datos.types} onChange={HandlesChange}>
               <option disabled selected value="">
                 Types
