@@ -1,0 +1,142 @@
+.toda_page{
+  background-image: url('../image/fondo-home.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: white;
+}
+
+.accesorio{
+    
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+  height: 30em;
+  margin: 0;
+  float: right;
+    width: 55%;
+    .container {
+        display: flex;
+        gap: 10px;
+    }
+    .card {
+        background-color:transparent;
+        height: 150px;
+    width: 150px;
+    flex: 1;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: auto ;
+    
+
+  }
+  .card_B:hover {
+    flex: 2;
+    background-color: #33ff37;
+  }
+
+  .card_Ch:hover {
+    flex: 2;
+    background-color: #ff7433;
+  }
+
+  .card_P:hover {
+    flex: 2;
+    background-color: #f5ff33;
+  }
+  .card_S:hover {
+    flex: 2;
+    background-color: #3399ff;
+  }
+  .img_pokemon{
+    width: 80px;
+  }
+  .img_pokemonP{
+    width: 90px;
+  }
+}
+.requisitos{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.652);
+  padding: 0.5em;
+  border-radius: 2rem;
+  font-family: 'Sofia Sans', sans-serif;
+  .text_req{
+    color:black;
+ 
+  }
+}
+
+.div_formulario{
+    width: 45%;
+    .form{
+      
+   background-color: rgba(0, 0, 0, 0.439);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 35em;
+    padding: 1.5em;
+    
+ }
+}
+.elH1{
+    font-family: 'Young Serif', serif;
+}
+.inputs{
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 185px;
+    background: transparent;
+    color: white;
+    border: none;
+    border-bottom: 2px solid white;
+}
+.inputs,.tipos:focus {
+    outline: none;
+  }
+.inputsDeNumeros{
+    display: flex;
+    flex-wrap: wrap; 
+    margin-left: 9em; 
+
+    .fila {
+        flex-basis: 50%;
+        box-sizing: border-box;
+        padding: 8px;
+    }
+    
+}
+.labels{
+    font-family: 'Kurale', serif;
+    font-weight: bold;
+}
+.inputs_number{
+    width: 3em;
+}
+.tipos{
+  border: none;
+  font-size: 16px;
+    padding: 5px 5px 5px 2.5px;
+    display: block;
+    width: 185px;
+    background: transparent;
+    color: rgb(159, 159, 159);
+}
+.btn {
+    font-size: 17px;
+    background: transparent;
+    border: none;
+    padding: 1em 1.5em;
+    color: #ffedd3;
+    text-transform: uppercase;
+    position: relative;
+  }
+  
+
+

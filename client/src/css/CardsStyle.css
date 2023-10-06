@@ -1,0 +1,30 @@
+.container-card{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+   margin: 0;
+
+}
+.conteiner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.paginacion{
+    display: flex;
+    backdrop-filter: blur(1em);
+    border: none;
+    border: 0;
+    padding: 0.5em;
+    width: 98.8%;
+    align-items: center;
+    justify-content: center;
+    .el_h4{
+        margin: 0;
+        color:white;
+        align-items: center;
+        
+    }
+}

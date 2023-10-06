@@ -1,0 +1,85 @@
+.toda_pagina{
+    background-image: url('../image/paisaje_pokemon.jpg');
+    height: 85vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  .Nombre{
+    font-size: 6ch;
+    
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+    -webkit-text-stroke: 1px white;
+  }
+
+.el_pokemon{
+    float: right;
+ width: 40%;
+  display: flex;
+ justify-content: center;
+ align-items: center; 
+ 
+
+}
+
+.fondo_pokemon{
+    border-radius: 1rem;
+   padding: 0.5em;
+    backdrop-filter: blur(2em);
+    border: solid white 0.5em;
+    margin-top: 2em;
+}
+.laimagen{
+    height: 30em;
+    margin: 0;
+}
+   
+.caja_data{
+ 
+  padding: 0;
+    float: left;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+    .cards {
+        margin: 8%;
+        font-family: Helvetica, sans-serif;
+        background-color: rgb(67, 67, 67);
+        padding: 1em;
+        border-radius: 1rem;
+      }
+    
+      .wrapper {
+        width: 300px;
+        font-size: small;
+        
+      }
+    
+    
+      .cuadros {
+        padding: 20px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: solid 0.1em;
+        border-top: solid 0.1em;
+        color: white;
+      }
+      
+   
+      
+     
+      
+ 
+      
+    
+  
+      
+ 
+      
+    
+      
+      
