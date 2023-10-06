@@ -133,12 +133,24 @@
 }
 
 .btn{
-  padding: 0.8em 2em;
-  border-radius: 2rem;
-  border: none;
+  font-family: monospace;
+  font-size: 1rem;
+  color: #FAFAFA;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 2px solid #FAFAFA;
+  background: #252525;
+  box-shadow: 3px 3px #fafafa;
   cursor: pointer;
-  transition: 1s;
+  margin: 5px 0;
 }
-.btn:hover{
-  background-color: #f5ff33;
+.btn:active {
+  box-shadow: none;
+  transform: translate(3px, 3px);
+}
+
+.btntxt{
+ font-size: 120%;
+ font-weight: bold;
 }
