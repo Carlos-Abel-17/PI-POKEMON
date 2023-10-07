@@ -76,7 +76,7 @@ function FormPage() {
     });
   }
   };
-
+  console.log(datos.types)
   return (
     <div className="toda_page">
       <div className="accesorio">

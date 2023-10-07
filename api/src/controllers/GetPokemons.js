@@ -14,7 +14,9 @@ const GetPokemons=async(url)=>{
           speed: data.stats[5].base_stat,
           height: data.height,
           weight: data.weight,
-          types: data.types[0].type.name
+          types: data.types.map(elem => {
+            return elem.type.name
+          })
         };
         return pokemonData
   }
