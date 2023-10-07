@@ -2,7 +2,6 @@ const axios =require('axios')
 
 
 const GetPokemons=async(url)=>{
-try {
    const respo = await axios(url)
    const data  = respo.data
     const pokemonData = {
@@ -15,21 +14,10 @@ try {
           speed: data.stats[5].base_stat,
           height: data.height,
           weight: data.weight,
-          types: data.types[0].type.name,
+          types: data.types[0].type.name
         };
         return pokemonData
-} catch (error) {
-  
-}
- 
   }
-
-      // Combinar ambos conjuntos de datos en un solo array de objeto
-
-
-
-
-
 
 module.exports={GetPokemons
  

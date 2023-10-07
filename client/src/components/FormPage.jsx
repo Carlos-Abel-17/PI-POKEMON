@@ -11,14 +11,13 @@ import successfulvalidation from "../asset/successfulvalidation";
 
 
 function FormPage() {
+  const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getTypes());
-  }, []);
+  }, [dispatch]);
 
-  const dispatch = useDispatch();
   const Types = useSelector((state) => state.types);
 
-  console.log(Types);
   const thevalues = {
     name: "",
     image: "",
@@ -28,13 +27,11 @@ function FormPage() {
     speed: "",
     weight: "",
     height: "",
-    types: 0,
+    types: []
   };
   const [datos, setdatos] = useState(thevalues);
-  console.log(datos);
   const [error, seterror] = useState({});
   const [access,setaccess]=useState({})
-  console.log(error);
 
   const SubmitHandler = (event, datos) => {
     if (Object.keys(error).length === 0) {
@@ -49,10 +46,17 @@ function FormPage() {
       alert("algo a fallado en el formulario revisalo por favor");
     }
   };
-
+  
   const HandlesChange = (e) => {
     const { name, value } = e.target;
-
+    if (name === "types") {
+      //el Array.From convierte en este caso la lista de option en un array que va a contener todas las opciones que seleccione estas opcione me traen el id del tipo 
+      const selectedValues = Array.from(e.target.selectedOptions, option => option.value);
+      setdatos({
+        ...datos,
+        [name]: selectedValues
+      });
+    }else{
     seterror(
       validate({
         ...datos,
@@ -68,7 +72,9 @@ function FormPage() {
     setdatos({
       ...datos,
       [name]: value,
+    // types: updatedTypes
     });
+  }
   };
 
   return (
@@ -310,12 +316,12 @@ function FormPage() {
           </div>
           <br />
           <div>
-            <select className="tipos" name="types" value={datos.types} onChange={HandlesChange}>
+            <select multiple className="tipos" name="types" target='types' value={datos.types}  onChange={HandlesChange}>
               <option disabled selected value="">
                 Types
               </option>
               {Types.map((tipo) => (
-                <option value={tipo.id} key={tipo.id}>
+                <option value={tipo.id} key={tipo.id}  >
                   {tipo.name}
                 </option>
               ))}
