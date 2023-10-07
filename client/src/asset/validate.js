@@ -27,8 +27,13 @@ if (datos.weight < 1 || datos.weight > 100) {
 if(datos.life < 1 || datos.life > 100){
     errores.life = 'Life must be more than 0 and less than 100 😕'
 }
-if(typeof datos.types === Number){
-    errores.types = "Debe tener un tipo el pokemon"
+if(datos.types.length === 0) {
+    console.log(datos.types)
+    errores.types = "Debe tener al menos un tipo el pokemon";
+}
+
+if(datos.types.length > 2) {
+    errores.types = "Debe tener como máximo dos tipos el pokemon";
 }
 
 return errores

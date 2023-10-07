@@ -55,7 +55,20 @@ function FormPage() {
       setdatos({
         ...datos,
         [name]: selectedValues
+
       });
+       seterror(
+      validate({
+        ...datos,
+        [name]: selectedValues,
+      })
+      
+    ); setaccess(
+      successfulvalidation({
+        ...datos,
+        [name]: selectedValues,
+      })
+    );
     }else{
     seterror(
       validate({
@@ -177,7 +190,7 @@ function FormPage() {
             >
               {error.types}
             </span>
-          )}
+          )}{access.types && (<span style={{color:'blue', fontSize: "15px" }}>{access.types}</span>) }
         </div>
         <div style={{display:'flex',alignItems:'center'}} >
             <h3>You Image:</h3>

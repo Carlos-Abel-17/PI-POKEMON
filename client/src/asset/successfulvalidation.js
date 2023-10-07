@@ -27,8 +27,8 @@ const successfulvalidation=(datos)=>{
     if(!datos.life < 1 || !datos.life > 100){
         access.life = 'The ready life👌'
     }
-    if(!typeof datos.types === Number){
-        access.types = "The ready type 👌"
+    if (datos.types.length >= 1 && datos.types.length <= 2) {
+        access.types = "The ready type 👌";
     }
     return access
 }
