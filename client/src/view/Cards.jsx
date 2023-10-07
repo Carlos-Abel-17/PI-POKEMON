@@ -10,7 +10,7 @@ function Cards() {
   const dispath= useDispatch()
     const response = useSelector((state)=>state.Pokemon)
    
-
+   console.log(response)
     
     const [currentPage, setCurrentPage] = useState(1);
     const cardsPerPage = 12;
@@ -43,6 +43,7 @@ function Cards() {
        <div   className='container-card'>
       {
         currentCards.map((pok)=>{
+          console.log(pok.name)
           return(
             <Card
             keys={pok.id}

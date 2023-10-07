@@ -9,7 +9,14 @@ function Card({name,image,types,id}) {
   function navigateHandler() {
     navigate(`/detail/${id}`);
   } 
-  
+  const tipos=()=>{
+    if (types===undefined) {
+        return 'es indefinido'
+    }
+    const lostipos = types.map((elem)=>elem.name)
+    console.log(lostipos)
+    return lostipos
+  }
   return (
     <div>
     <div className='toda_la_carta'>
@@ -20,12 +27,12 @@ function Card({name,image,types,id}) {
         <img src={image} className='la_image' alt="iamge" />
   </div>
         <h2 className='h2_span'>
-  <span className='span_card'> 
+  <span key={id} className='span_card'> 
    {name}
   </span>
         </h2>
   <h3 className="job"> 
-    Type:{types}
+    Type:{tipos()}
   </h3>
   
   <button className='button' onClick={navigateHandler}> Click

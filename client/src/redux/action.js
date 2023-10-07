@@ -47,7 +47,6 @@ export const getTypes =()=>{
   return async(dispatch)=>{
     try {
       const{ data } = await axios.get(urltype)
-      
         return dispatch({
           type:GETTYPES,
           payload:data

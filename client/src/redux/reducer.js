@@ -36,6 +36,7 @@ const initialSate={
                 Pokemon:[action.payload,...state.AllPokemon]
               }
          case FILTERTYPE:
+          console.log(state.AllPokemon.map((pk)=>pk.types))
           return{
             ...state,
             Pokemon:state.AllPokemon.filter((pokemon)=>pokemon.types.includes(action.payload) )
