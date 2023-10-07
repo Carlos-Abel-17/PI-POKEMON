@@ -43,7 +43,6 @@ function Cards() {
        <div   className='container-card'>
       {
         currentCards.map((pok)=>{
-          console.log(pok.types)
           return(
             <Card
             keys={pok.id}

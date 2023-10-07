@@ -38,7 +38,7 @@ const initialSate={
          case FILTERTYPE:
           return{
             ...state,
-            Pokemon:state.AllPokemon.filter((pokemon)=>pokemon.types === action.payload )
+            Pokemon:state.AllPokemon.filter((pokemon)=>pokemon.types.includes(action.payload) )
           }
           case ORDER_AZ_ZA:
             let ordenar;
