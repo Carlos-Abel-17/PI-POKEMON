@@ -11,7 +11,7 @@ const CreatePokemon=async(data)=>{
             speed:data.speed,
             height:data.height,
             weight:data.weight,
-            types:data.types
+           
         }
         
         const NewPokemon= await Pokemon.create(nuevoPokemon);

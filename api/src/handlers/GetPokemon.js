@@ -1,8 +1,7 @@
 const axios = require('axios')
 const URL= 'https://pokeapi.co/api/v2/pokemon?offset=&limit=60'
  const {GetPokemons}=require('../controllers/GetPokemons')
- const {Pokemon}=require('../db')
-// const extraerURL ='http://localhost:3001/pokemons'
+ const {Pokemon,Type}=require('../db')
 
 
 const GetPokemon = async (req,res)=>{
@@ -16,11 +15,17 @@ const GetPokemon = async (req,res)=>{
          pokelist.push(urlpok)
       }
    }
-   const pokeDB = await Pokemon.findAll()
+ 
+   const pokeDB = await Pokemon.findAll({
+      include: {
+        model: Type,
+        attributes: ['name'], 
+        through: { attributes: [] } 
+      }
+    })
+   
    const respuesta=[...pokeDB,...pokelist]
    res.status(200).json(respuesta)
-   
-      
  } catch (error) {
     res.status(500).json({error:error.message})
  }
