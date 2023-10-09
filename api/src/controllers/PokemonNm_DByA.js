@@ -8,7 +8,9 @@ const PokemonNm_API = async(name)=>{
     const {data} =await axios.get(`https://pokeapi.co/api/v2/pokemon/${convertido}`)
     
     if (data.name) {
-        
+        const tipo=data.types.map(elem => ({
+            name: elem.type.name
+           }))
         const POKEMON ={
         id: data.id,
         name: data.name,
@@ -19,7 +21,7 @@ const PokemonNm_API = async(name)=>{
         speed: data.stats[5].base_stat,
         height: data.height,
         weight: data.weight,
-        types:data.types[0].type.name
+        types:tipo
         
     }
     return POKEMON

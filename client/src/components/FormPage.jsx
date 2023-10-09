@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { createPokemon, getTypes, getpokemon } from "../redux/action";
 import validate from "../asset/validate";
 import successfulvalidation from "../asset/successfulvalidation";
-
+import Footer from '../view/Footer'
 
 function FormPage() {
   const dispatch = useDispatch();
@@ -348,6 +348,7 @@ function FormPage() {
           </button>
         </form>
       </div>
+
     </div>
   );
 }

@@ -90,7 +90,6 @@ function handleFilter(event){
 </button>
     </div>
    </div>
-
      <Cards/>
 
     </div>

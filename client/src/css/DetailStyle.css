@@ -1,19 +1,30 @@
 .toda_pagina{
-    background-image: url('../image/paisaje_pokemon.jpg');
-    height: 85vh;
-    background-repeat: no-repeat;
-    background-size: cover;
+ margin: 0;
+ padding: 0;
+ width: 100%;
 }
+.name_image{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   background-image: url('../image/zyro-image.png');
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size:100% 100%;
   .Nombre{
-    font-size: 6ch;
-    
+    font-size: 7ch;
     font-family: 'DM Sans', sans-serif;
     margin: 0;
-    -webkit-text-stroke: 1px white;
+    color: white;
+    -webkit-text-stroke: 0.5px black;
   }
+}
+.laimagen{
+    height: 30em;
+    margin: 0.5em;
+}
 
 .el_pokemon{
-    float: right;
  width: 40%;
   display: flex;
  justify-content: center;
@@ -22,52 +33,38 @@
 
 }
 
-.fondo_pokemon{
-    border-radius: 1rem;
-   padding: 0.5em;
-    backdrop-filter: blur(2em);
-    border: solid white 0.5em;
-    margin-top: 2em;
-}
-.laimagen{
-    height: 30em;
-    margin: 0;
-}
    
 .caja_data{
  
   padding: 0;
-    float: left;
-    width: 60%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
     .cards {
-        margin: 8%;
         font-family: Helvetica, sans-serif;
-        background-color: rgb(67, 67, 67);
-        padding: 1em;
-        border-radius: 1rem;
+        background-color: white;
+        display: flex;
+        width: 99.99%;
+        background-color: rgba(0, 0, 0, 0.971);
       }
     
       .wrapper {
-        width: 300px;
-        font-size: small;
-        
+        display: flex;
+        font-size: medium;
+        margin: 0em 1.1em;
       }
-    
     
       .cuadros {
-        padding: 20px 10px;
-        display: flex;
+        padding: 4% 13%;
+        align-items: center;
         flex-direction: row;
-        justify-content: space-between;
         border-bottom: solid 0.1em;
         border-top: solid 0.1em;
-        color: white;
+        color:white;
       }
+
       
    
       

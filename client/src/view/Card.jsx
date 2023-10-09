@@ -45,7 +45,7 @@ function Card({name,image,types,id}) {
     Type:{tipos(types)}
   </h3>
   
-  <button className='button' onClick={navigateHandler}> Click
+  <button className='button' onClick={navigateHandler}> Detail
   </button>
   
 </div>

@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
+import Footer from '../view/Footer'
 import '../css/DetailStyle.css'
 
 
@@ -11,25 +12,41 @@ function DetailPage() {
 
  useEffect(()=>{
   axios(`http://localhost:3001/pokemons/${id}`).then(({data})=>{
+    console.log(data)
     if(data.name){
       setpokemon(data);
-    }else{
+    }
+    else{
       alert('No hay pokemon con ese ID')
     }
   })
   return setpokemon({})
  },[])
-//  
+ const typess = pokemon.types
+ const tipos=(typess)=>{
+  if (Array.isArray(typess)) {
+    return typess.map(item => {
+      if (typeof item === 'object' && item !== null) {
+        return Object.values(item).join(', ');
+      }
+      return item;
+    }).join(', ');
+  }
+
+  if (typeof typess === 'object' && typess !== null) {
+    return Object.values(typess).join(', ');
+  }
+
+  if (typeof typess === 'string') {
+    return typess;
+  }
+}
   return (
     <div className='toda_pagina'>
-      <div className='el_pokemon'>
-        <div className='fondo_pokemon'>
-    <img src={pokemon.image} alt="pokemon" className='laimagen'/>
-        </div>
-        </div>
         <div className='caja_data'>
-    <div className='name'>
+    <div className='name_image'>
   <span className='Nombre'>{pokemon.name}</span>
+    <img src={pokemon.image} alt="pokemon" className='laimagen'/>
     </div>
       <div className="cards">
   <div className="wrapper">
@@ -39,7 +56,7 @@ function DetailPage() {
     </div>
     <div className="cuadros ">
     TYPE:
-      <span className="hex">{pokemon.types}</span>
+      <span className="hex">{tipos(typess)}</span>
     </div>
     <div className="cuadros">
     ATTACK:
@@ -57,10 +74,10 @@ function DetailPage() {
     WEIGHT:
       <span className="hex">{pokemon.weight}</span>
     </div>
-
     </div>
     </div>
         </div>
+
     </div>
     )}
   

@@ -19,7 +19,7 @@ function App() {
       <Route path='/detail/:id' element={<DetailPage />} />
       <Route path='/from'  element={<FormPage />}/>
     </Routes>
-    {location.pathname !== '/'  &&(<Footer/>)}
+     {location.pathname !== '/' && (<Footer/>)}
     </div>
   )
 }
