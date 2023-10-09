@@ -15,7 +15,8 @@ const sequelize = new Sequelize(
    }
 );
 const basename = path.basename(__filename);
-
+// los modelos de las tablas de la base de datos
+//                       ↓          ↓
 const modelDefiners = [pokemonML,typeML];
 
 // Leemos todos los archivos de la carpeta Models, los requerimos y agregamos al arreglo modelDefiners
@@ -44,7 +45,7 @@ sequelize.models = Object.fromEntries(capsEntries);
 // Para relacionarlos hacemos un destructuring
 
 const { Pokemon, Type } = sequelize.models;
-
+// creando la relacion de las toblas con la tbala intermedia 
 Pokemon.belongsToMany(Type, { through: 'pokemon_type' });
 Type.belongsToMany(Pokemon, { through: 'pokemon_type' });
 

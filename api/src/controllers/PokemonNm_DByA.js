@@ -1,7 +1,7 @@
 const axios =require('axios')
 const {Pokemon} =require('../db')
 
-
+//?busqueda en el API
 const PokemonNm_API = async(name)=>{
     console.log(name + ' del pokemon name')
     const convertido = name.toLowerCase()
@@ -27,6 +27,7 @@ const PokemonNm_API = async(name)=>{
     return POKEMON
 }
 }
+//?busqueda en la base de datos
 const PokemonNm_DB=async(nameP)=>{
     const encontraP = await Pokemon.findOne({
         where:{name:nameP}

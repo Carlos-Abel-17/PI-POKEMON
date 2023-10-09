@@ -1,9 +1,9 @@
-
+//TODO:esta funcion tiene la finalidad de taerme un pokemon tanto como del apii o de la base de datos 
 const axios = require('axios') 
 const {Pokemon} = require('../db')
 
 const PokemonAPI = async(id)=>{
-   if(!isNaN(id)){
+   if(!isNaN(id)){//? Si el id no es una string entonces lo va a buscar en la api
  const porURL = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
  const data  = porURL.data
  const tipo=data.types.map(elem => ({
@@ -22,7 +22,7 @@ const PokemonAPI = async(id)=>{
    types:tipo
  }
  return POKEMON
-}else{
+}else{//?De lo contrario va a buscar el primari key en la base de ddtos
    const porDB = await Pokemon.findByPk(id)
    return porDB
 }

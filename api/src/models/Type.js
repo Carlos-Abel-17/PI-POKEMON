@@ -1,3 +1,4 @@
+//!modelo de la tabla type en mi base de datos con los timetpms elimonados o no agregados 
 const {DataTypes} = require('sequelize')
 
 module.exports =(sequelize)=>{

@@ -1,12 +1,15 @@
+//TODO:la funcion resive por parametro la URL que le manda el handlers
 const axios =require('axios')
 
 
 const GetPokemons=async(url)=>{
    const respo = await axios(url)
    const data  = respo.data
+   //?la popiedad types es un array entonces lo mapeamos para poder extraer hasta la ultima informacion de la propiedad types  
    const tipo=data.types.map(elem => ({
     name: elem.type.name
    }))
+   //*extructura que tomara la informacion extraida
     const pokemonData = {
           id: data.id,
           name: data.name,

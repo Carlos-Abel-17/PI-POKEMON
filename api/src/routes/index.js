@@ -7,13 +7,15 @@ const GetType = require('../handlers/GetType');
 
 
 const router = Router();
-
-// Configurar los routers
-// Ejemplo: router.use('/auth', authRouter);
+//?ruta para la busqueda por nombre ↓
 router.get('/pokemons/name',GetPokemonN)
+//?ruta para poder llamar a los pokemones tanto como de la base de datos como a los de la api ↓
 router.get('/pokemons',GetPokemon)
+//?ruta para poder llamar a los pokemones por su id tanto a los de la api como a los de la base de datos ↓ 
 router.get('/pokemons/:id',GetPokemonId)
+//?ruta para poder crear o postear a un nuevo pokemon ↓
 router.post('/pokemons',PostPokemon)
+//?ruta para llamar a todos los tipos de pokemones que hay ↓
 router.get ('/type',GetType)
 module.exports = router;
 
