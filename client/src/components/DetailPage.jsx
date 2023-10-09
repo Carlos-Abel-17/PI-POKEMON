@@ -12,7 +12,6 @@ function DetailPage() {
 
  useEffect(()=>{
   axios(`http://localhost:3001/pokemons/${id}`).then(({data})=>{
-    console.log(data)
     if(data.name){
       setpokemon(data);
     }

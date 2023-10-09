@@ -1,9 +1,9 @@
 
 const axios = require('axios') 
-const {Pokemon,Type} = require('../db')
+const {Pokemon} = require('../db')
 
-const PokemonAPI = async(ids)=>{
-   if(!isNaN(ids)){
+const PokemonAPI = async(id)=>{
+   if(!isNaN(id)){
  const porURL = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
  const data  = porURL.data
  const tipo=data.types.map(elem => ({
@@ -23,19 +23,8 @@ const PokemonAPI = async(ids)=>{
  }
  return POKEMON
 }else{
-   const porDB = await Pokemon.findAll({
-    include: {
-      model: Type,
-      attributes: ['name'], 
-      through: { attributes: [] } 
-    }
-  })
-  const array= []
-  const guardar = array.push(porDB)
-  console.log(guardar)
-  const filter = guardar.filter((el)=>el.id === ids)
- console.log(filter)
-   return filter
+   const porDB = await Pokemon.findByPk(id)
+   return porDB
 }
 
 }
