@@ -11,7 +11,9 @@ function DetailPage() {
  const [pokemon,setpokemon]=useState({});
 
  useEffect(()=>{
+  console.log(id)
   axios(`http://localhost:3001/pokemons/${id}`).then(({data})=>{
+console.log(data)
     if(data.name){
       setpokemon(data);
     }
