@@ -23,7 +23,7 @@ const PokemonAPI = async(id)=>{
  }
  return POKEMON
 }else{//?De lo contrario va a buscar el primari key en la base de ddtos
-   const porDB = await Pokemon.findAll({ where: { id: id },include:[{model: Type, attributes: ['name'],through: { attributes: [] }}]}, );
+   const porDB = await Pokemon.findOne({ where: { id: id },include:[{model: Type, attributes: ['name'],through: { attributes: [] }}]}, );
   console.log(porDB)
    return porDB
 }
