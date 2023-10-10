@@ -331,7 +331,8 @@ function FormPage() {
             
           </div>
           <br />
-          <div>
+          <div style={{flexDirection:'column',display:'flex',alignItems:'center'}}>
+            <span style={{color:'white'}}>Manten presionado CTRL para selcionar mas de uno</span>
             <select multiple className="tipos" name="types" target='types' value={datos.types}  onChange={HandlesChange}>
               <option disabled selected value="">
                 Types
