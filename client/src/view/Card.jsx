@@ -10,7 +10,7 @@ function Card({name,image,types,id}) {
     navigate(`/detail/${id}`);
   } 
   const tipos=(typess)=>{
-    if (Array.isArray(typess)) {
+    if (Array.isArray(typess)) {//*si es un array y adentro trae objetos asi es como viene mis tipos 
       return typess.map(item => {
         if (typeof item === 'object' && item !== null) {
           return Object.values(item).join(', ');
@@ -19,11 +19,11 @@ function Card({name,image,types,id}) {
       }).join(', ');
     }
   
-    if (typeof typess === 'object' && typess !== null) {
+    if (typeof typess === 'object' && typess !== null) {//*si solo viene un objetos tuve un problemas con eso
       return Object.values(typess).join(', ');
     }
   
-    if (typeof typess === 'string') {
+    if (typeof typess === 'string') {//*a los pokemones que busco por la api que no esten agregados en la paginacion su tipos viene como string 
       return typess;
     }
   }

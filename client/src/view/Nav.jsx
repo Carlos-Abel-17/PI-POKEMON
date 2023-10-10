@@ -8,6 +8,7 @@ import { searchpokemon } from "../redux/action";
 import { useDispatch } from "react-redux";
 
 function Nav() {
+
   const [Name, setName] = useState("");
   const dispath = useDispatch();
   const chagehandler = (event) => {
@@ -23,6 +24,7 @@ function Nav() {
         <img className="pokebola" src={pokebola} alt="pokebola" />
         <img className="logo_pokemon" src={logo_pokemon} alt="logo" />
       </div>
+      {/* //*input de busqueda  */}
       <div className="searchBox">
         <input
           type="search"
@@ -38,10 +40,10 @@ function Nav() {
             onsearch(Name);
           }}
         >
-          {" "}
-          <img src={lupa} alt="lupa" />{" "}
+          <img src={lupa} alt="lupa" />
         </button>
       </div>
+      {/* //*links de las rutas */}
       <nav className="links">
         <Link className="link-1" to={"/"}>
           Landing

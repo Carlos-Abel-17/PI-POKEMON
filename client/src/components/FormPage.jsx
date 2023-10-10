@@ -12,13 +12,14 @@ import Footer from '../view/Footer'
 
 function FormPage() {
   const dispatch = useDispatch();
+  //*ejecutamos el getTypes apenas iniciamos la pagina de formulario 
   useEffect(() => {
     dispatch(getTypes());
   }, [dispatch]);
 
   const Types = useSelector((state) => state.types);
 
-  const thevalues = {
+  const thevalues = {//*la extructuara de como se va a enviar la info
     name: "",
     image: "",
     attack: "",
@@ -29,11 +30,13 @@ function FormPage() {
     height: "",
     types: []
   };
+
   const [datos, setdatos] = useState(thevalues);
   const [error, seterror] = useState({});
   const [access,setaccess]=useState({})
 
   const SubmitHandler = (event, datos) => {
+    //!si existe algun erro que no se envie la informacion 
     if (Object.keys(error).length === 0) {
       alert("el pokemon se a creado");
       event.preventDefault();
@@ -50,7 +53,7 @@ function FormPage() {
   const HandlesChange = (e) => {
     const { name, value } = e.target;
     if (name === "types") {
-      //el Array.From convierte en este caso la lista de option en un array que va a contener todas las opciones que seleccione estas opcione me traen el id del tipo 
+      //?el Array.From convierte en este caso la lista de option en un array que va a contener todas las opciones que seleccione estas opcione me traen el id del tipo 
       const selectedValues = Array.from(e.target.selectedOptions, option => option.value);
       setdatos({
         ...datos,
@@ -85,7 +88,7 @@ function FormPage() {
     setdatos({
       ...datos,
       [name]: value,
-    // types: updatedTypes
+  
     });
   }
   };
@@ -107,7 +110,7 @@ function FormPage() {
             <img src={squitle} alt="squitle" className="img_pokemon" />
           </div>
         </div>
-        <div className="requisitos">
+        <div className="requisitos">//! los Errores
           <h2 className="text_req">requirements to create your pokemon</h2>
             <br />
           {error.name && (

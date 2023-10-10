@@ -14,7 +14,6 @@ const Paginacion = ({ currentPage, totalPages, onPageChange }) => {
           id='botones'
         >
           {pagina}
-          
         </button>
       ))}
     </div>

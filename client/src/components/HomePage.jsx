@@ -8,7 +8,7 @@ import reseters from '../image/reset.svg'
 
 
 
-function HomePage() {
+function HomePage() {//TODO: filtros por order alfabeico,typos de pokemones,por ataque,filtro de pokemones
   const [valueType, setValueType] = useState()
   const dispath = useDispatch()
   const handleType =(eltype)=>{
@@ -70,17 +70,17 @@ function handleFilter(event){
     </select>
     <select onChange={attackhandler} className='select'>
     <option disabled selected value="">select a order attack</option>
-      <option value="MN">mas a menos</option>
-      <option value="NM">menos a mas</option>
+      <option value="MN">more to less + -</option>
+      <option value="NM">less to more - +</option>
     </select>
     </div>
     <div>
-    <select name="" id="" 
+    <select 
     onChange={handleFilter} className='select'
     >
-            <option value="All">Todos</option>
+            <option value="All">ALL</option>
             <option value="API">API</option>
-            <option value="DB">Base de datos</option>
+            <option value="DB">database</option>
            </select>
     </div>
     <div>

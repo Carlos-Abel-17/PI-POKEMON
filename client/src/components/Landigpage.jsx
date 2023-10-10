@@ -4,7 +4,7 @@ import pikachu from '../image/pikachu-laending.png'
 import pokebola from '../image/pokebola.png'
 import logotipo from '../image/log-pokemon.png'
 import { Link } from 'react-router-dom'
-
+//TODO:la presentacion
 function Landigpage() {
   return (
  <div className='fondo'>

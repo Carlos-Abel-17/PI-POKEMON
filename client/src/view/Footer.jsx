@@ -4,7 +4,7 @@ import discord from '../image/discord.svg'
 import github from '../image/github.svg'
 import linkeind from '../image/linkeind.svg'
 import facebook from '../image/facebook.svg'
-
+//TODO:mis redes sociales 
 function Footer() {
   return (
     <div className='footer'>
