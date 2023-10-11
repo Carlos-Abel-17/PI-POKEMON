@@ -110,7 +110,8 @@ function FormPage() {
             <img src={squitle} alt="squitle" className="img_pokemon" />
           </div>
         </div>
-        <div className="requisitos">//! los Errores
+        <div className="requisitos">
+          {/* //! los Errores */}
           <h2 className="text_req">requirements to create your pokemon</h2>
             <br />
           {error.name && (

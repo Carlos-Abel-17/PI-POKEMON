@@ -7,8 +7,11 @@ export const ORDERATTACK='ORDERATTACK'
 export const GETTYPES='GETTYPES'
 export const CREATEPOKEMON = 'CREATEPOKEMON' 
 export const FILTER_POKEMONS='FILTER_POKEMONS'
+// export const FIERWATER='FIREWATER'
 
 import axios from 'axios'
+
+
 
 export const searchpokemon = (Name) => {
     return async (dispatch) => {

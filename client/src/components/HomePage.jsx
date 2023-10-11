@@ -8,7 +8,7 @@ import reseters from '../image/reset.svg'
 
 
 
-function HomePage() {//TODO: filtros por order alfabeico,typos de pokemones,por ataque,filtro de pokemones
+function HomePage() {
   const [valueType, setValueType] = useState()
   const dispath = useDispatch()
   const handleType =(eltype)=>{

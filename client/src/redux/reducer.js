@@ -1,5 +1,5 @@
 
-import {GETPOKEMON,FILTER_POKEMONS,SEARCHPOKEMON,FILTERTYPE,ORDER_AZ_ZA,RESET,ORDERATTACK,GETTYPES, CREATEPOKEMON} from "./action"
+import {GETPOKEMON,FILTER_POKEMONS,SEARCHPOKEMON,FILTERTYPE,ORDER_AZ_ZA,RESET,ORDERATTACK,GETTYPES, CREATEPOKEMON,FIREWATER} from "./action"
 
 const initialSate={
   Pokemon:[],
@@ -35,6 +35,11 @@ const initialSate={
                 ...state,
                 Pokemon:[action.payload,...state.AllPokemon]
               }
+              // case FIREWATER:
+              // return{
+              //  ...state,
+              //  Pokemon:state.AllPokemon.filter((pokemo)=>{return pokemo.types.some((eltipo)=>eltipo.name==='fire' && eltipo.name==='water')})
+              // }
          case FILTERTYPE:
           console.log(state.AllPokemon.filter((pokemon)=>{return pokemon.types.some((tipo)=>tipo.name=== action.payload)} ))
           return{
