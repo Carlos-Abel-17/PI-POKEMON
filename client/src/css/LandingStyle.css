@@ -102,4 +102,20 @@ h1{
     opacity: 1;
 }
 }
+@media (max-width: 768px) {
+  .imagen{
+    z-index:1;
+    
+     margin-left:5em ;
+    .pikachu{
+        height: 30em;
+    }
+  } 
+  .pokemon{
+    font-family: sans-serif;
+    color: transparent;
+   
+ 
+}
+}
 

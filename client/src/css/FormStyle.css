@@ -77,7 +77,6 @@
 .div_formulario{
     width: 45%;
     .form{
-      
    background-color: rgba(0, 0, 0, 0.439);
     display: flex;
     align-items: center;
@@ -153,4 +152,33 @@
 .btntxt{
  font-size: 120%;
  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+ .toda_page{
+  background-attachment: fixed;
+   min-height: 100vh;
+ }
+ .accesorio{
+  position: relative;
+  margin-bottom:25em ;
+  width: auto;
+
+ }
+ .div_formulario{
+  .form{
+    width: 22.6em;
+    position: relative;
+   
+  }
+}
+.requisitos{
+  position: relative;
+}
+ .container{
+  flex-wrap: wrap;
+ }
+ .inputsDeNumeros{
+  margin-left: 4em;
+ }
 }

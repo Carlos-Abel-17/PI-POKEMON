@@ -28,7 +28,7 @@ function Card({name,image,types,id}) {
     }
   }
   return (
-    <div>
+    <div className='todo_page'>
     <div className='toda_la_carta'>
         <div className="card">
   <div className="card-border-top">

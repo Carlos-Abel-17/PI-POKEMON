@@ -3,6 +3,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 1em 0.5em;
+        flex-wrap: wrap;
         border-bottom: #1A1A1A solid 0.4em;
         background: linear-gradient(to left, #3405a3b4, rgba(255, 255, 0, 0.812));
     }
@@ -20,6 +21,7 @@
     }
     .links{
         margin-right: 1em;
+        flex-wrap: wrap;
         .link-1{
             margin-left: 0.4em;
           text-decoration: none;
@@ -114,3 +116,14 @@ color: white;
       font-size: 15px;
       padding: 24px 46px 24px 26px;
     }
+
+    @media (max-width: 768px) {
+     .navbar{
+      padding: 2em;
+      flex-direction: column;
+      background:  rgba(52, 5, 163, 0.837);
+     }
+      .searchBox{
+      margin:0.5em;
+     } 
+    } 

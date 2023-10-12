@@ -1,4 +1,6 @@
-
+.todo_page{
+  width: 25%;
+}
 .toda_la_carta{
     margin:0.5em
 
@@ -80,3 +82,12 @@
   .job{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
+  @media (max-width: 768px) {
+    .todo_page{
+      width: 50%;
+    }
+    .card{
+      width: 100%;
+      height: 100%;
+    }
+ }

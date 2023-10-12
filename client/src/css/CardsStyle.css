@@ -3,7 +3,6 @@
     display: flex;
     flex-wrap: wrap;
    margin: 0;
-
 }
 .conteiner{
     display: flex;
@@ -28,3 +27,9 @@
         
     }
 }
+@media (max-width: 768px) {
+   .paginacion{
+    width: 90%;
+   }
+  }
+  
