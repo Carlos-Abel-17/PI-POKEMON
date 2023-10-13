@@ -1,6 +1,6 @@
-//TODO:la funcion resive por parametro la URL que le manda el handlers
-const axios =require('axios')
 
+const axios =require('axios')
+const {Pokemon,Type}=require('../db')
 
 const GetPokemons=async(url)=>{
    const respo = await axios(url)
@@ -25,7 +25,19 @@ const GetPokemons=async(url)=>{
        
         return pokemonData
   }
+ 
+  const GetDB =async()=>{
 
-module.exports={GetPokemons
+   
+  const traerDB= await Pokemon.findAll({
+    include:{
+      model:Type,
+      attributes:['name'],
+      through:{attributes:[]}
+    }
+   })
+   return traerDB
+  }
+module.exports={GetPokemons,GetDB
  
 }

@@ -3,7 +3,7 @@ const axios = require('axios')
 const {Pokemon,Type} = require('../db')
 
 const PokemonAPI = async(id)=>{
-   if(!isNaN(id)){//? Si el id no es una string entonces lo va a buscar en la api
+   if(!isNaN(id)){
  const porURL = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
  const data  = porURL.data
  const tipo=data.types.map(elem => ({
@@ -22,7 +22,7 @@ const PokemonAPI = async(id)=>{
    types:tipo
  }
  return POKEMON
-}else{//?De lo contrario va a buscar el primari key en la base de ddtos
+}else{
    const porDB = await Pokemon.findOne({ where: { id: id },include:[{model: Type, attributes: ['name'],through: { attributes: [] }}]}, );
   console.log(porDB)
    return porDB

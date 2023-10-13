@@ -11,20 +11,18 @@ const GetTypes = async (req, res) => {
   };
 
   try {
-    const response = await axios.get(url);//*pedimos informacion a el array principal del api
+    const response = await axios.get(url);
     const response2 = response.data.results.map((element) => {
-      //*con la funcion getdetail extraemos la informacion de cada URL que este en el array principal
       return getDetails(element);
     });
 
     const responseFinal = await Promise.all(response2);
-    //*iteramos el array que nos devulve el Promise.All
     for (const element of responseFinal) {
-      await Type.findOrCreate({//*cada informacion nueva que ingrese va ser buscada atravez de su nombre primero si ya existe si no hay pues lo crea
+      await Type.findOrCreate({
         where: { name: element.name },
       });
     }
-    const DBfind = await Type.findAll();//*devolvemos todos los elementos que esten en la tabla pokemons
+    const DBfind = await Type.findAll();
     return res.status(200).json(DBfind);
   } catch (error) {
       return res.status(400).json({ error: error.message });

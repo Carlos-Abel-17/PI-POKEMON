@@ -9,14 +9,14 @@ module.exports=PostPokemon=async (req, res) => {
       return res.status(400).json('missing data')
      }
 
-     const findPokemon=await Pokemon.findOne({//?Que me traiga el primer elemento de la base de datos que coincida con el nombre que le mando   
+     const findPokemon=await Pokemon.findOne({
       where:{name:data.name.toLowerCase()}
      })
 
-     if (findPokemon) {//*si la constante devuelve algo me se activa esta condicion que me va a decir que el pokemon ya existe 
+     if (findPokemon) {
       return res.status(302).json({message:"this pokemon already exists"})
      }
-     //!la funcion que se encargara de crear al nuevo pokemon 
+     
      const newpokemon =await CreatePokemon(req.body)
      return res.status(200).json(newpokemon)
 
